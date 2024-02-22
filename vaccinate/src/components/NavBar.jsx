@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import Login from './Login'
+import Signup from './Signup'
 
 const menuItems = [
   {
@@ -7,12 +9,20 @@ const menuItems = [
     href: '/',
   },
   {
-    name: 'About',
-    href: '/about',
+    name: 'Upload',
+    href: '/upload',
   },
   {
-    name: 'Contact',
-    href: '/contact',
+    name: 'Dashboard',
+    href: '/dashboard',
+  },
+  {
+    name: 'Certificate',
+    href: '/certificate',
+  },
+  {
+    name: "FAQ's",
+    href: '/faq',
   },
 ]
 
@@ -22,12 +32,12 @@ export default function NavBar() {
 
 
   return (
-    <div className="relative w-full bg-white">
+    <div className="w-full z-10 backdrop-blur-md  sticky top-1">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <span>
             <img src="https://i.pinimg.com/564x/1d/ca/f2/1dcaf20d1cd105b8fcf69c3e802ff144.jpg" width="40" height="40"
-              class="d-inline-block align-top" alt="" loading="lazy"/>
+              className="d-inline-block align-top" alt="" loading="lazy"/>
           </span>
           <span className="font-bold text-blue-500">VaccinateMe</span>
         </div>
@@ -54,6 +64,8 @@ export default function NavBar() {
             placeholder="Serach"
           ></input>
         </div>
+        <Login />
+        <Signup />
         
       </div>
     </div>

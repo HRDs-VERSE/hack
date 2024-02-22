@@ -3,12 +3,12 @@ import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDis
 import { MailIcon } from "../assets/MailIcon";
 import { LockIcon } from "../assets/LockIcon";
 
-export default function Login() {
+export default function Signup() {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
   return (
     <>
-      <Button onPress={onOpen} color="primary" className="mx-2">Login</Button>
+      <Button onPress={onOpen} color="primary">Signup</Button>
       <Modal 
         isOpen={isOpen} 
         onOpenChange={onOpenChange}
@@ -17,7 +17,7 @@ export default function Login() {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1 text-center">Log in</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1 text-center">Sign Up</ModalHeader>
               <ModalBody>
                 <Input
                   autoFocus
@@ -33,6 +33,15 @@ export default function Login() {
                     <LockIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
                   }
                   label="Password"
+                  placeholder="Enter your password"
+                  type="password"
+                  variant="bordered"
+                />
+                <Input
+                  endContent={
+                    <LockIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                  }
+                  label="Confirm Password"
                   placeholder="Enter your password"
                   type="password"
                   variant="bordered"
@@ -55,7 +64,7 @@ export default function Login() {
                   Close
                 </Button>
                 <Button color="primary" onPress={onClose}>
-                  Sign in
+                  Sign up
                 </Button>
               </ModalFooter>
             </>
