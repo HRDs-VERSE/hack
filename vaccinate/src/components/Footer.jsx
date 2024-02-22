@@ -3,7 +3,7 @@ import React from 'react'
 
 export function Footer() {
     return (
-        <footer className="w-full">
+        <footer className="w-full mt-[8rem]">
             <div className="mx-auto flex max-w-6xl flex-col items-start space-x-8 md:flex-row">
                 <div className="w-full px-4 md:w-1/2 lg:px-0">
                     <h1 className="max-w-sm text-3xl font-bold">Subscribe For Vaccination Updates</h1>
