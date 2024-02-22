@@ -31,8 +31,8 @@ export default function NavBar() {
           </span>
           <span className="font-bold text-blue-500">VaccinateMe</span>
         </div>
-        {/* <div className="hidden lg:block"> */}
-          {/* <ul className="ml-12 inline-flex space-x-8">
+        <div className="hidden lg:block">
+          <ul className="ml-12 inline-flex space-x-8">
             {menuItems.map((item) => (
               <li key={item.name}>
                 
@@ -45,8 +45,8 @@ export default function NavBar() {
                 </Link>
               </li>
             ))}
-          </ul> */}
-        {/* </div> */}
+          </ul>
+        </div>
         <div className="flex grow justify-end">
           <input
             className="flex h-10 w-[250px] rounded-md bg-gray-100 px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
